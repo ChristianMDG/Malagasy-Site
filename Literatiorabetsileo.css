@@ -1,0 +1,916 @@
+:root {
+    --primary-color--: #D4A017;
+    --secondary-color: #F4F0E1;
+    --tertiary-color: #A64B2A;
+    --terre-color: #A64B2A;
+
+    /* Rouge terre cuite */
+    --foret-color: #4E7734;
+    /* Vert forêt */
+    --soleil-color: #D4A017;
+    /* Jaune doré */
+    --ciel-color: #2A517E;
+    /* Bleu profond */
+    --blanc-casse: #F4F0E1;
+    /* Blanc cassé */
+}
+
+body {
+ padding: 0;
+ margin: 0;
+}
+/* Animation de l'apparition progressive */
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Appliquer l'animation sur le body */
+/* Animation d'apparition progressive pour le body */
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeInPage 2s ease-in-out;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+
+
+main{
+    width: 95%;
+        margin: 0 auto;
+        background-color: #f4f4f4;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        text-align: justify;
+}
+
+header {
+    background: var(--primary-color--);
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    color: #fff;
+    text-align: center;
+
+    position: relative;
+    /* Nécessaire pour la pseudo-classe ::before */
+    background-image: url(images/bg\ 1.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 95vh;
+    animation: animate 60s ease-in-out infinite;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Overlay noir avec une opacité de 50% */
+    z-index: 1;
+    /* S'assurer que l'overlay soit au-dessus de l'image */
+}
+
+header * {
+    position: relative;
+    /* S'assurer que le contenu reste au-dessus de l'overlay */
+    z-index: 2;
+}
+
+@keyframes animate {
+
+    0% {
+        background-image: url(images/bg\ 1.png);
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url(images/Image3.png);
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url(images/Image4.png);
+        background-size: cover;
+    }
+
+
+}
+
+#header-contenair {
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+header h2 {
+    position: relative;
+    /* S'assurer que le contenu reste au-dessus de l'overlay */
+    z-index: 2;
+    margin: 0;
+    font-size: 5em;
+
+}
+
+header p {
+    margin: 0;
+    font-size: 2em;
+    font-style: italic;
+
+}
+
+#header-contenair button {
+    background: var(--primary-color--);
+    width: 20vh;
+    height: 7vh;
+    border-radius: 30px;
+    margin-bottom: 5vh;
+    border: solid 2px white;
+}
+/*animation button */
+@keyframes moveButton {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+button {
+    background-color: var(--foret-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: moveButton 1s ease forwards;
+    /* Animation de déplacement */
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    /* Change la couleur de fond au survol */
+    transform: scale(1.1);
+    /* Agrandit légèrement le bouton au survol */
+   
+}
+section {
+    padding: 20px;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 5px;
+    border-bottom: 2px solid white;
+    
+}
+
+section h2 {
+    background: var(--primary-color--);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+section h3 {
+    color: var(--tertiary-color);
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1vh;
+    padding: 9vh;
+}
+
+table,
+th,
+td {
+    border: 1px solid #244d7a;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: var(--secondary-color);
+}
+#fampidirana,
+#rija {
+    background: var(--blanc-casse);
+
+
+}
+
+
+#video {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: auto;
+    background: var(--secondary-color);
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    border-radius: 8px;
+
+}
+
+video {
+    width: 125%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+#playPauseButton {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(46, 30, 30, 0.3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#playPauseButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#tantara-rija {
+    background: var(--secondary-color);
+    padding: 7vh;
+
+}
+
+
+#tantara-rija-container {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+    grid-template-areas: "texte image-1";
+    text-align: justify;
+    gap: 7vh;
+}
+
+#tantara-rija-container h3 li {
+    color: var(--tertiary-color);
+
+
+}
+
+#texte {
+    background: transparent;
+    grid-area: texte;
+}
+
+#image-container {
+    background: #897979;
+    /* Couleur de fond du conteneur */
+    border: solid 5px white;
+    /* Bordure blanche épaisse */
+    border-radius: 25px;
+    /* Coins arrondis */
+    width: 65vh;
+    /* Largeur basée sur la hauteur de la vue */
+    height: 65vh;
+    /* Hauteur pour maintenir l'aspect carré */
+    background-image: url('images/rij.png');
+    /* Image de fond */
+    background-size: cover;
+    /* S'assure que l'image couvre tout le conteneur */
+    display: grid;
+    /* Utilisation de Grid pour aligner le contenu */
+    justify-content: center;
+    /* Centre le contenu horizontalement */
+    align-items: center;
+    /* Centre le contenu verticalement */
+    transition: background-image 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Transition douce pour l'image de fond et la transformation */
+}
+
+#image-container:hover {
+    
+    /* Retire l'image de fond au survol */
+    transform: scale(1.1);
+    /* Agrandit légèrement le conteneur */
+    background-color: rgba(137, 121, 121, 0.9);
+    /* Change légèrement la couleur de fond pour un effet visuel */
+}
+
+#trum {
+    background: var(--secondary-color);
+    padding: 5vh 0;
+    /* Ajoute un peu d'espace vertical */
+    color: #fff;
+    /* Améliore la lisibilité avec un contraste élevé */
+}
+
+#trum-container {
+    text-align: justify;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "trum-image-2 trum-texte";
+    gap: 7vh;
+    /* Espacement entre les éléments de la grille */
+    padding: 5vh;
+    /* Padding uniforme pour l'intérieur du conteneur */
+}
+
+#trum-image-2 {
+    grid-area: trum-image-2;
+    background-image: url('images/rija.png');
+    /* Vérifiez le chemin de l'image */
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    overflow: hidden;
+    /* Cache les débordements d'éléments enfants */
+}
+
+#trum-image-2:hover {
+    transform: scale(1.05);
+    /* Subtile agrandissement au survol */
+    background-color: rgba(137, 121, 121, 0.9);
+    /* Effet de fondu sur l'image de fond */
+}
+
+#trum-texte {
+    background: rgba(255, 255, 255, 0.8);
+    /* Plus opaque pour une meilleure lisibilité */
+    backdrop-filter: blur(10px);
+    /* Effet de flou pour un arrière-plan distinct */
+    grid-area: trum-texte;
+    padding: 7vh;
+    /* Padding généreux pour le contenu textuel */
+    border-radius: 25px;
+    /* Bords arrondis pour une apparence douce */
+    color: black;
+}
+
+.custom-bullet {
+    list-style: none;
+    /* Supprime les puces par défaut */
+    padding: 0;
+}
+
+.custom-bullet li {
+    padding: 10px;
+    /* Espacement autour des éléments de liste */
+    border-bottom: 1px solid #ddd;
+    /* Séparateurs subtils */
+    margin-bottom: 5px;
+    /* Espacement entre les éléments de liste */
+}
+
+.custom-bullet .title {
+    font-weight: bold;
+    /* Mettez en évidence les titres de liste */
+    color: var(--primary-color);
+    /* Utilisez une variable de couleur primaire pour la cohérence */
+}
+
+.custom-bullet p {
+    margin-top: 5px;
+    /* Espacement au-dessus du texte */
+}
+#sokela {
+background: var(--secondary-color);
+}
+
+#sokela-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5vh;
+    padding: 7vh;
+
+}
+
+#sokela-texte {
+    background: transparent;
+    padding: 2vh;
+    text-align: justify;
+
+}
+
+#sokela-image {
+    background-image: url('images/sokel.png');
+    /* Assurez-vous que le chemin et le nom du fichier sont corrects */
+    background-size: cover;
+    background-position: center;
+    /* Centre l'image dans son conteneur */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Douce transition pour l'animation */
+    cursor: pointer;
+    /* Change le curseur en main lors du survol, indiquant que l'élément est interactif */
+    border-radius: 50px;
+}
+
+#sokela-image:hover {
+    transform: scale(1.1);
+    /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    /* Ajoute une ombre pour un effet de profondeur */
+}
+#sokela-texte-2{
+    background: var(--blanc-casse);
+}
+.custom-bullet {
+    list-style: none;
+    /* Supprimer les puces par défaut */
+    padding-left: 0;
+    /* Enlever l'indentation par défaut */
+}
+
+.custom-bullet li {
+    position: relative;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    /* Ajouter de l'espacement entre les éléments */
+}
+
+.custom-bullet li::before {
+    font-family: "Font Awesome 5 Free";
+    /* Utiliser la bibliothèque Font Awesome */
+    font-weight: 900;
+    /* Choisir le style de l'icône */
+    position: absolute;
+    left: -30px;
+    /* Positionner l'icône à gauche de l'élément */
+    font-size: 1.2em;
+}
+
+/* Icône pour chaque instrument */
+.custom-bullet li:nth-child(1)::before {
+    content: "\f001";
+    /* Icône de tambour (amponga) */
+    color: #ff6347;
+}
+
+.custom-bullet li:nth-child(2)::before {
+    content: "\f51d";
+    /* Icône de flûte (sodina) */
+    color: #4CAF50;
+}
+
+.custom-bullet li:nth-child(3)::before {
+    content: "\f51f";
+    /* Icône de guitare (zavamaneno misy kofehy) */
+    color: #2196F3;
+}
+
+.custom-bullet li:nth-child(4)::before {
+    content: "\f1bc";
+    /* Icône de trompette (zavamaneno amin'ny fandresena) */
+    color: #FF9800;
+}
+
+/* Optionnel : styles pour le titre */
+.custom-bullet h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+footer {
+background-color: var(--secondary-color);
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/*style de la liste*/
+/* Styles généraux pour les listes non ordonnées et ordonnées */
+ul,
+ol {
+    margin: 20px 0;
+    padding: 0;
+    list-style-position: inside;
+    /* Les puces ou les numéros à l'intérieur du padding */
+}
+
+/* Style pour les listes non ordonnées */
+ul {
+    list-style-type: disc;
+    /* Type de puce: disc, circle, square, none */
+}
+
+ul.custom-bullet {
+    list-style-type: none;
+    /* Retirer les puces par défaut */
+}
+
+ul.custom-bullet li {
+    position: relative;
+    padding-left: 20px;
+}
+
+ul.custom-bullet li::before {
+    content: "\2022";
+    /* Utiliser un caractère unicode pour les puces personnalisées */
+    position: absolute;
+    left: 0;
+    color: #ff6347;
+    /* Couleur des puces */
+}
+
+/* Style pour les listes ordonnées */
+ol {
+    list-style-type: none;
+    /* Type de numérotation: decimal, lower-alpha, upper-alpha, lower-roman, upper-roman */
+}
+
+ol.custom-counter {
+    list-style-type: none;
+    /* Retirer la numérotation par défaut */
+    counter-reset: custom-counter;
+    /* Initialiser un compteur personnalisé */
+}
+
+ol.custom-counter li {
+    counter-increment: custom-counter;
+    /* Incrémenter le compteur personnalisé */
+    position: relative;
+    padding-left: 20px;
+}
+
+ol.custom-counter li::before {
+    content: counter(custom-counter) ". ";
+    /* Afficher la valeur du compteur suivi d'un point */
+    position: absolute;
+    left: 0;
+    color: #4682b4;
+    /* Couleur de la numérotation */
+}
+
+/* Styles pour les éléments de liste */
+li {
+    margin: 5px 0;
+    /* Espacement vertical entre les éléments de liste */
+    padding: 5px;
+    /* Espacement à l'intérieur des éléments de liste */
+    background: #f9f9f9;
+    /* Fond des éléments de liste */
+    border-radius: 5px;
+    /* Coins arrondis */
+}
+
+/* Container pour les cartes */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    
+}
+
+/* Style des cartes */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animation lors du survol */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style des titres et des paragraphes */
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Style pour les sections */
+section {
+    padding: 40px;
+    background-color: var(--blanc-casse);
+    text-align: justify;
+}
+
+/* Titre des sections */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 600px) {
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Cacher le contenu au départ */
+.toggle-content {
+    display: none;
+}
+
+/* Style pour les titres */
+.toggle-title {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.toggle-title:hover {
+    text-decoration: underline;
+}
+
+#image-container {
+    flex: 1 1 50%;
+    /* Prend 50% de l'espace mais est flexible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-1 {
+    background-image: url('/chemin/vers/votre-image.png');
+    /* Remplacez par le chemin réel */
+    background-size: cover;
+    /* Ajuste l'image pour remplir tout l'espace */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* S'étire sur toute la largeur disponible */
+    height: 300px;
+    /* Vous pouvez ajuster cette hauteur */
+}
+
+@media (max-width: 768px) {
+
+    /* Pour les écrans plus petits */
+    #image-1 {
+        height: 200px;
+        /* Réduire la taille de l'image pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Encore plus petit */
+    #image-1 {
+        height: 150px;
+        /* Encore plus petit pour s'adapter aux écrans de téléphones */
+    }
+}
+
+/* Responsivité pour petits écrans */
+@media (max-width: 768px) {}
+
+/* Responsivité pour très petits écrans */
+@media (max-width: 480px) {}
+
+#conclusion-isa {
+   
+    padding: 2vh;
+    text-align: justify;
+}
+
+#container-conclusion-isa {
+    background: white;
+   
+    border-radius: 30px;
+    padding: 7vh;
+}
+
+/*section zava maneno isa*/
+#instruments {
+ 
+}
+
+.container-instruments {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas: "text-content image-content";
+    width: auto;
+}
+
+.text-content {
+    grid-area: text-content;
+    margin-right: 20px;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+}
+
+.instrument {
+    margin-top: 20px;
+}
+
+.instrument h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+   
+}
+
+.instrument p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.image-content {
+    display: grid;
+    background: wheat;
+    grid-area: image-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.instrument img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/*section Fitambarana-Kolontsaina*/
+.container-Fitambarana-Kolontsaina {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: justify;
+}
+
+h1 {
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    flex-basis: calc(33.333% - 10px);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 5px;
+}
+
+.tab h2 {
+    background-color: #e0e0e0;
+    color: black;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+}
+
+/* Animation de base pour faire apparaître les éléments */
+@keyframes fadeInScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Les éléments apparaissent en glissant du bas */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Fin de l'animation */
+    }
+}
+
+.hidden {
+    opacity: 0;
+    /* Cache l'élément au départ */
+    transition: opacity 0.5s ease-out;
+}
+
+/* Classe qui sera ajoutée lorsque l'élément est visible */
+.visible {
+    animation: fadeInScroll 1s ease-out forwards;
+}
+
+   #isa-section {
+       width: auto;
+       margin: 0 auto;
+   }
+
+   #isa-section h2 {
+       text-align: center;
+       margin-bottom: 30px;
+       font-size: 2rem;
+       color: #333;
+   }
+
+   #isa-section ol {
+       list-style: none;
+   }
+
+   #isa-section li {
+       background-color: white;
+       padding: 20px;
+       margin-bottom: 15px;
+       border-radius: 8px;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+   }
+
+   #isa-section li:hover {
+       background-color: var(--primary-color--);
+      
+   }
+
+   #isa-section .title {
+       font-size: 1.5rem;
+       color: black;
+   }
+
+   #isa-section p {
+       font-size: 1rem;
+       color: black;
+       line-height: 1.6;
+       margin-top: 10px;
+       display: none;
+   }
+
+   #isa-section li.active p {
+       display: block;
+   }
+
+   #isa-section .hidden {
+       display: none;
+   }
+
+        

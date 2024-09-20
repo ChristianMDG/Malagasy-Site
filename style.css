@@ -1,0 +1,101 @@
+footer {
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #021eb7, #2d0b00);
+    color: #fff;
+    padding: 80px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+#link ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+#link ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    display: contents;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .far {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    outline: none;
+}
+
+
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyrignt {
+    text-align: center;
+}
+
+ box-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+   
+}
+#bureau{
+    text-align: center;
+}
+#bureau p {
+    margin-top: 6vh;
+    line-height: normal;
+}

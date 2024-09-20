@@ -1,0 +1,93 @@
+:root {
+  --primary-color--: #D4A017;
+  --secondary-color: #F4F0E1;
+  --tertiary-color: #A64B2A;
+  --terre-color: #A64B2A;
+
+  /* Rouge terre cuite */
+  --foret-color: #4E7734;
+  /* Vert forêt */
+  --soleil-color: #D4A017;
+  /* Jaune doré */
+  --ciel-color: #2A517E;
+  /* Bleu profond */
+  --blanc-casse: #F4F0E1;
+  /* Blanc cassé */
+}
+.modern-section {
+  padding: 50px 30px;
+  background-color: var(--blanc-casse);
+  max-width: 1300px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, );
+}
+
+.container-sokela {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-block {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-block:hover {
+  transform: translateY(-5px);
+}
+
+.custom-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.custom-list li {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.custom-list li::before {
+  content: '•';
+  color: #3498db;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .modern-section {
+    padding: 20px 10px;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
+  .custom-list li {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-section {
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}

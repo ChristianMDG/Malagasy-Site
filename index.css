@@ -1,0 +1,599 @@
+:root {
+    --primary-color--: #D4A017;
+    --secondary-color: #F4F0E1;
+    --tertiary-color: #A64B2A;
+    --terre-color: #A64B2A;
+
+    /* Rouge terre cuite */
+    --foret-color: #4E7734;
+    /* Vert forêt */
+    --soleil-color: #D4A017;
+    /* Jaune doré */
+    --ciel-color: #2A517E;
+    /* Bleu profond */
+    --blanc-casse: #F4F0E1;
+    /* Blanc cassé */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    background: var(--secondary-color);
+    font-family: Arial, sans-serif;
+
+}
+/*animation body*/
+/* Animation de l'apparition progressive */
+@keyframes fadeInPage {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Appliquer l'animation sur le body */
+body {
+    animation: fadeInPage 2s ease-in-out;
+    /* La page devient visible en 2 secondes */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+main{
+    width: 95%;
+        margin: 0 auto;
+      background: var(--secondary-color);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        text-align: justify;
+}
+
+header {
+    background: var();
+    height: 25vh;
+    z-index: 999;
+}
+
+.container {
+    background: #796565;
+    grid-template-rows: auto auto;
+    border-bottom: 2px solid black;
+
+}
+
+#Entete {
+    display: grid;
+    position: fixed;
+    width: 100%;
+    grid-template-columns: 2.5fr 3fr 1fr;
+    background: var(--secondary-color);
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 17vh;
+    
+
+}
+
+#sary-1 {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    background-image: url(images/LOGO.png);
+    background-size: cover;
+    width: 70px;
+    height: 75px;
+
+}
+
+#sary-2 {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 86px;
+    width: 216px;
+    background-image: url('images/AKADEIA\ MALAGASY.png');
+    background-size: cover;
+}
+
+#sary-3 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 77px;
+    width: 63px;
+    background-image: url('images/Rectangle\ 5.png');
+    background-size: cover;
+
+}
+
+#logo {
+    color: white;
+    font-size: 5vh;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--ciel-color);
+    border-radius: 10px;
+    height: 10vh;
+    margin-top: 15vh;
+    padding: 5vh;
+
+
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 1vh;
+   
+
+}
+
+ul li a:hover {
+    background-color: #fffbfb;
+    color: black;
+    border-color: transparent;
+}
+
+#hero {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    margin-top: vh;
+    padding: 3vh;
+    height: 100vh;
+    background-image: url('images/madagascar-baobab-afrique-1320x883.webp');
+    background-size: cover;
+    border-bottom: 2px solid black;
+    /*animation: animate 160s ease-in-out infinite;*/
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay semi-transparente noire */
+    z-index: 1;
+}
+
+#hero p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 5vh;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+
+@keyframes animate {
+    30% {
+        background-image: url('images/view-quiver-trees-forest-with-beautiful-sky-sunset-twilight-sky-scene-keetmanshoop-namibia_1150-21606.jpg');
+        background-size: cover;
+    }
+
+    70% {
+        background-image: url('');
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url('images/OIP.jpg');
+        background-size: cover;
+    }
+}
+
+section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid;
+    border-color: white;
+}
+
+#fampafantarana {
+    display: grid;
+    background: var(--blanc-casse);
+    padding: 2vh;
+    line-height: 20vh;
+
+
+}
+
+#container-fampafantarana {
+    background: white;
+    padding: 4vh;
+    border-radius: 25px;
+    box-sizing: border-box;
+
+}
+
+#fampafantarana h1 {
+    text-align: center;
+    font-size: 5vh;
+    color: var(--terre-color);
+
+}
+
+#fampafantarana p {
+    font-size: 2.5vh;
+    line-height: 4vh;
+}
+
+/* Literatiora betsileo*/
+#literatiora {
+    height: auto;
+
+}
+
+#container-literatiora {
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas: "texte photo";
+    padding: 10vh;
+}
+
+#texte {
+    grid-area: texte;
+    display: grid;
+    justify-content: center;
+
+    align-items: center;
+}
+
+#texte h1 {
+    color: var(--terre-color);
+    font-size: 10vh;
+
+}
+
+#texte h3 {
+    color: black;
+    font-size: 5vh;
+}
+
+#boutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes moveButton {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+button {
+    background-color: var(--foret-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: moveButton 1s ease forwards; /* Animation de déplacement */
+}
+
+button:hover {
+    background-color: var(--soleil-color); /* Change la couleur de fond au survol */
+    transform: scale(1.1); /* Agrandit légèrement le bouton au survol */
+}
+/*animation button*/
+@keyframes moveButton {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+button {
+    background-color: var(--foret-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: moveButton 1s ease forwards;
+    /* Animation de déplacement */
+}
+
+button:hover {
+    background-color: var(--soleil-color);
+    /* Change la couleur de fond au survol */
+    transform: scale(1.1);
+    /* Agrandit légèrement le bouton au survol */
+}
+
+#texte button {
+    background: var(--terre-color);
+    width: 20vh;
+    height: 7vh;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 2vh;
+    border-color: transparent;
+
+
+}
+
+#texte button:hover {
+    background: white;
+    color: black;
+    border-color: transparent;
+}
+
+#photo {
+
+    grid-area: photo;
+    padding: 10vh;
+
+    img {
+        width: 60vh;
+        height: 50vh;
+        border-radius: 50px;
+    }
+}
+
+
+/* Section mpanoratra */
+#mpanoratra {
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+#container-mpanoratra {
+    background: white;
+    border-radius: 30px;
+    padding: 10vh;
+    color: black;
+
+}
+#container-mpanoratra 
+.section-title {
+
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--terre-color);
+
+}
+
+.Intro {
+
+    margin-top: 5vh;
+    color: black;
+    text-align: center;
+
+
+}
+
+.author-cards {
+    display: flex;
+    margin-top: 10vh;
+    justify-content: center;
+    gap: 10vh;
+    /* Ajout d'espacement entre les cartes */
+
+}
+
+.author-card {
+
+    width: 240px;
+    /* Réduction de la taille de la carte */
+    height: 340px;
+    /* Ajuster en fonction de la nouvelle largeur */
+
+    margin-bottom: 30px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    z-index: 1;
+    color: black;
+}
+
+.author-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.author-image {
+    width: 95%;
+    height: 250px;
+    /* Réduire la taille de l'image pour correspondre à la nouvelle taille de carte */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.author-name {
+    font-size: 1.4em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.card-back {
+
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.author-description {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.author-link {
+    color: var(--ciel-color);
+    text-decoration: underline;
+}
+
+.author-link:hover {
+    text-decoration: none;
+    color: #ff6347;
+}
+
+
+#boky {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+
+}
+#boky h1{
+    font-size: 2.5em;
+    color: var(--terre-color);
+}
+
+.boky-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    width: 110vh;
+    grid-template-areas: "boky-1 boky-2 boky-3"
+        "boky-4 boky-5 boky-6";
+    background-color: #f4f4f4;
+    padding: 10vh;
+    gap: 7vh;
+}
+#boky-1{
+    height: 35vh;
+    background: #000;
+    background-image: url('./images/font\ Image3.png');
+}
+
+#boky-4 {
+    height: 35vh;
+    background: #000;
+    background-image: url('./images/font\ Image3.png');
+}
+
+.boky-container div {
+    background-color: #ffffff;
+    /* Couleur de fond des éléments */
+    border-radius: 10px;
+    /* Coins arrondis pour un look moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Légère ombre pour effet 3D */
+    padding: 20px;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boky-container div:hover {
+    transform: translateY(-5px);
+    /* Léger mouvement vers le haut au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Augmentation de l'ombre pour plus de profondeur */
+}
+
+.boky-container div:active {
+    transform: translateY(0);
+    /* Réinitialisation du mouvement lors du clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Réduction de l'ombre lors du clic */
+}
+
+/* Adaptabilité pour petits écrans */
+@media (max-width: 768px) {
+    .boky-container {
+        grid-template-columns: 1fr;
+        /* Une colonne sur les petits écrans */
+    }
+}
+
+
+footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10vh;
+    color: var(--ciel-color);
+}
+
+
