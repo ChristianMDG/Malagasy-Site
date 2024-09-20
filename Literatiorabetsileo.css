@@ -378,6 +378,26 @@ video {
     background-color: rgba(137, 121, 121, 0.9);
     /* Effet de fondu sur l'image de fond */
 }
+#trum-image-0 {
+    grid-area: trum-image-2;
+    background-image: url('images/rij.png');
+    /* Vérifiez le chemin de l'image */
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    overflow: hidden;
+    /* Cache les débordements d'éléments enfants */
+}
+
+#trum-image-0:hover {
+    transform: scale(1.05);
+    /* Subtile agrandissement au survol */
+    background-color: rgba(137, 121, 121, 0.9);
+    /* Effet de fondu sur l'image de fond */
+}
 
 #trum-texte {
     background: rgba(255, 255, 255, 0.8);
@@ -520,9 +540,7 @@ footer {
 background-color: var(--secondary-color);
     color: black;
     text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
+   
 }
 
 /*style de la liste*/
@@ -763,6 +781,8 @@ section h2 {
     line-height: 1.6;
 
 }
+
+
 
 .instrument {
     margin-top: 20px;

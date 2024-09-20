@@ -1,7 +1,24 @@
+:root {
+    --primary-color--: #D4A017;
+    --secondary-color: #F4F0E1;
+    --tertiary-color: #A64B2A;
+    --terre-color: #A64B2A;
+
+    /* Rouge terre cuite */
+    --foret-color: #4E7734;
+    /* Vert forêt */
+    --soleil-color: #D4A017;
+    /* Jaune doré */
+    --ciel-color: #2A517E;
+    /* Bleu profond */
+    --blanc-casse: #F4F0E1;
+    /* Blanc cassé */
+}
+
 footer {
     width: 100%;
     bottom: 0;
-    background: linear-gradient(to right, #021eb7, #2d0b00);
+    background: linear-gradient(to right,#D4A017 , #A64B2A);
     color: #fff;
     padding: 80px 0 30px;
     border-top-left-radius: 125px;

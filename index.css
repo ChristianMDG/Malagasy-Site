@@ -91,7 +91,7 @@ header {
     align-items: center;
     text-align: center;
 
-    background-image: url(images/LOGO.png);
+    background-image: url('images/LOGO.png');
     background-size: cover;
     width: 70px;
     height: 75px;
@@ -181,7 +181,17 @@ ul li a:hover {
     background-image: url('images/madagascar-baobab-afrique-1320x883.webp');
     background-size: cover;
     border-bottom: 2px solid black;
-    /*animation: animate 160s ease-in-out infinite;*/
+    animation: animate 160s ease-in-out infinite;
+}
+@keyframes animate {
+    10% {
+        background-image: url('images/view-quiver-trees-forest-with-beautiful-sky-sunset-twilight-sky-scene-keetmanshoop-namibia_1150-21606.jpg');
+        background-size: cover;
+    }
+    100% {
+        background-image: url('images/OIP.jpg');
+        background-size: cover;
+    }
 }
 
 #hero::before {
@@ -196,6 +206,7 @@ ul li a:hover {
     z-index: 1;
 }
 
+
 #hero p {
     position: relative;
     z-index: 2;
@@ -205,22 +216,7 @@ ul li a:hover {
     margin-bottom: 5vh;
 }
 
-@keyframes animate {
-    30% {
-        background-image: url('images/view-quiver-trees-forest-with-beautiful-sky-sunset-twilight-sky-scene-keetmanshoop-namibia_1150-21606.jpg');
-        background-size: cover;
-    }
 
-    70% {
-        background-image: url('');
-        background-size: cover;
-    }
-
-    100% {
-        background-image: url('images/OIP.jpg');
-        background-size: cover;
-    }
-}
 
 section {
     display: grid;
@@ -539,14 +535,53 @@ button:hover {
 #boky-1{
     height: 35vh;
     background: #000;
-    background-image: url('./images/font\ Image3.png');
+    background-image: url('./images/livre-du-ohabolana-au-hainteny-removebg-preview.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+#boky-2 {
+    height: 35vh;
+    background: #000;
+background-image: url('./images/angano.jpg');
+    background-size: cover;
+        background-position: center;
+}
+#boky-3 {
+    height: 35vh;
+    background: #000;
+    background-image: url('./images/fitenin\ drazana.png');
+    background-size: cover;
+    background-position: center;
+
 }
 
 #boky-4 {
     height: 35vh;
     background: #000;
-    background-image: url('./images/font\ Image3.png');
+    background-image: url('./images/kabary.jpg');
+    background-size: cover;
+    background-position: center;
 }
+
+#boky-5 {
+    height: 35vh;
+    background: #000;
+    background-image: url('./images/hainteny.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+#boky-6 {
+    height: 35vh;
+    background: #000;
+    background-image: url('./images/feno-tsiky-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 
 .boky-container div {
     background-color: #ffffff;
@@ -592,8 +627,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 10vh;
-    color: var(--ciel-color);
+ 
 }
 
 
