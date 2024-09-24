@@ -262,9 +262,11 @@ section {
 
 #container-fampafantarana {
     background: white;
-    padding: 4vh;
+    padding: 1.5vh;
     border-radius: 25px;
     box-sizing: border-box;
+    padding-bottom: 5vh;
+   
 
 }
 
@@ -277,7 +279,10 @@ section {
 
 #fampafantarana p {
     font-size: 2.5vh;
-    line-height: 4vh;
+    line-height: 3.5vh;
+    text-align: justify;
+    padding: 3.5vh;
+
 }
 
 /* Literatiora betsileo*/

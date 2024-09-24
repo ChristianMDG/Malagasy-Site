@@ -18,6 +18,7 @@
 body {
  padding: 0;
  margin: 0;
+ line-height: 1.5;
 }
 /* Animation de l'apparition progressive */
 @keyframes fadeInPage {
@@ -234,7 +235,91 @@ th {
 #rija {
     background: var(--blanc-casse);
 
+}
+/* Style pour la section Rija */
+.rija-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
 
+.rija-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+h2 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.rija-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.rija-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #f7f7f7;
+    /* Changement léger de la couleur d'arrière-plan */
+}
+
+/* Optionnel : pour rendre l'intérieur de la carte plus interactif */
+.rija-card:hover h3{
+    color:var();
+}
+.rija-card:hover p {
+    color: var();
+    /* Change la couleur du texte au survol */
+}
+.rija-card:hover li {
+    color: var(--ciel-color);
+    /* Change la couleur du texte au survol */
+}
+
+.rija-card h3 {
+    color: var(--terre-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.rija-card p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-container .rija-card {
+    flex: 1 1 calc(33% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.card-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-container li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .card-container .rija-card {
+        flex: 1 1 100%;
+    }
 }
 
 
@@ -410,33 +495,31 @@ video {
     border-radius: 25px;
     /* Bords arrondis pour une apparence douce */
     color: black;
+    line-height: 3.5vh;
 }
-
+.title{
+font-size: 3vh;
+color: var(--terre-color);
+}
 .custom-bullet {
     list-style: none;
-    /* Supprime les puces par défaut */
-    padding: 0;
+    /* Supprimer les puces par défaut */
+    padding-left: 0;
+    /* Enlever l'indentation par défaut */
 }
 
 .custom-bullet li {
-    padding: 10px;
-    /* Espacement autour des éléments de liste */
-    border-bottom: 1px solid #ddd;
-    /* Séparateurs subtils */
-    margin-bottom: 5px;
-    /* Espacement entre les éléments de liste */
+    position: relative;
+    font-size: medium;
+    margin-bottom: 1rem;
+    /* Ajouter de l'espacement entre les éléments */
 }
 
-.custom-bullet .title {
-    font-weight: bold;
-    /* Mettez en évidence les titres de liste */
-    color: var(--primary-color);
-    /* Utilisez une variable de couleur primaire pour la cohérence */
-}
 
-.custom-bullet p {
-    margin-top: 5px;
-    /* Espacement au-dessus du texte */
+/* Optionnel : styles pour le titre */
+.custom-bullet h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 #sokela {
 background: var(--secondary-color);
@@ -445,15 +528,25 @@ background: var(--secondary-color);
 #sokela-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-areas: "trum-texte";
     gap: 5vh;
     padding: 7vh;
 
 }
 
 #sokela-texte {
-    background: transparent;
-    padding: 2vh;
     text-align: justify;
+    background: rgba(255, 255, 255, 0.8);
+        /* Plus opaque pour une meilleure lisibilité */
+        backdrop-filter: blur(10px);
+        /* Effet de flou pour un arrière-plan distinct */
+        grid-area: trum-texte;
+        padding: 7vh;
+        /* Padding généreux pour le contenu textuel */
+        border-radius: 25px;
+        /* Bords arrondis pour une apparence douce */
+        color: black;
+        line-height: 3.5vh;
 
 }
 
@@ -476,64 +569,7 @@ background: var(--secondary-color);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
     /* Ajoute une ombre pour un effet de profondeur */
 }
-#sokela-texte-2{
-    background: var(--blanc-casse);
-}
-.custom-bullet {
-    list-style: none;
-    /* Supprimer les puces par défaut */
-    padding-left: 0;
-    /* Enlever l'indentation par défaut */
-}
 
-.custom-bullet li {
-    position: relative;
-    font-size: 1.2em;
-    margin-bottom: 1rem;
-    /* Ajouter de l'espacement entre les éléments */
-}
-
-.custom-bullet li::before {
-    font-family: "Font Awesome 5 Free";
-    /* Utiliser la bibliothèque Font Awesome */
-    font-weight: 900;
-    /* Choisir le style de l'icône */
-    position: absolute;
-    left: -30px;
-    /* Positionner l'icône à gauche de l'élément */
-    font-size: 1.2em;
-}
-
-/* Icône pour chaque instrument */
-.custom-bullet li:nth-child(1)::before {
-    content: "\f001";
-    /* Icône de tambour (amponga) */
-    color: #ff6347;
-}
-
-.custom-bullet li:nth-child(2)::before {
-    content: "\f51d";
-    /* Icône de flûte (sodina) */
-    color: #4CAF50;
-}
-
-.custom-bullet li:nth-child(3)::before {
-    content: "\f51f";
-    /* Icône de guitare (zavamaneno misy kofehy) */
-    color: #2196F3;
-}
-
-.custom-bullet li:nth-child(4)::before {
-    content: "\f1bc";
-    /* Icône de trompette (zavamaneno amin'ny fandresena) */
-    color: #FF9800;
-}
-
-/* Optionnel : styles pour le titre */
-.custom-bullet h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
 
 
 footer {
@@ -651,8 +687,11 @@ li {
 
 .card p {
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 2;
     color: #333;
+}
+.card li{
+    line-height: 1.5;
 }
 
 /* Style pour les sections */
@@ -934,3 +973,6 @@ h1 {
    }
 
         
+   strong{
+    color: var(--soleil-color);
+   }
