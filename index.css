@@ -266,7 +266,7 @@ section {
     border-radius: 25px;
     box-sizing: border-box;
     padding-bottom: 5vh;
-   
+
 
 }
 
@@ -303,13 +303,12 @@ section {
     grid-area: texte;
     display: grid;
     justify-content: center;
-
     align-items: center;
 }
 
 #texte h1 {
     color: var(--terre-color);
-    font-size: 10vh;
+    font-size: 7vh;
 
 }
 
